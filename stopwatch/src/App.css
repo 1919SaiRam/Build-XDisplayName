@@ -1,5 +1,4 @@
-/* src/App.css */
-
+/* App.css */
 .form-container {
   width: 300px;
   margin: 0 auto;
@@ -14,7 +13,6 @@
   margin-bottom: 5px;
 }
 
-/* Updated CSS selectors to match HTML elements used */
 .form-group input[type="text"] {
   width: 100%;
   padding: 8px;
@@ -22,7 +20,6 @@
   border-radius: 4px;
 }
 
-/* Updated CSS selectors to match HTML elements used */
 .form-group button[type="submit"] {
   padding: 8px 16px;
   background-color: #007bff;
@@ -32,7 +29,6 @@
   cursor: pointer;
 }
 
-/* Updated CSS selectors to match HTML elements used */
 .form-group button[type="submit"]:hover {
   background-color: #0056b3;
 }

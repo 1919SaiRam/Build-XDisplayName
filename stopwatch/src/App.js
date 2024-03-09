@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from "react";
 import "./App.css";
 
@@ -17,6 +18,8 @@ function App() {
       setLastName("");
       // Disable submit button after successful submission
       setSubmitDisabled(true);
+    } else {
+      console.log("Please fill in both first name and last name.");
     }
   };
 
@@ -75,3 +78,4 @@ function App() {
 }
 
 export default App;
+
