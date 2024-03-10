@@ -7,6 +7,7 @@ function App() {
   const [lastName, setLastName] = useState("");
   const [fullName, setFullName] = useState("");
   const [submitDisabled, setSubmitDisabled] = useState(true);
+  const [formError, setFormError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,8 +19,11 @@ function App() {
       setLastName("");
       // Disable submit button after successful submission
       setSubmitDisabled(true);
+      // Reset form error message
+      setFormError("");
     } else {
-      console.log("Please fill in both first name and last name.");
+      // Set form error message
+      setFormError("Please fill out both first name and last name fields.");
     }
   };
 
@@ -31,11 +35,7 @@ function App() {
       setLastName(value);
     }
     // Enable submit button only if both fields are filled
-    if (firstName && lastName) {
-      setSubmitDisabled(false);
-    } else {
-      setSubmitDisabled(true);
-    }
+    setSubmitDisabled(firstName.trim() === "" || lastName.trim() === "");
   };
 
   return (
@@ -66,6 +66,7 @@ function App() {
           <button type="submit" disabled={submitDisabled}>
             Submit
           </button>
+          {formError && <p className="error-message">{formError}</p>}
         </div>
       </form>
       {fullName && (
